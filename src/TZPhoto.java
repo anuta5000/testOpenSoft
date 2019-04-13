@@ -22,11 +22,8 @@ public class TZPhoto {
         ImageIO.write(grayscale, "jpg", outputfile);
         fos.flush();
         fos.close();
-
-        System.out.println(outPath);
-
+        System.out.println("The black-white image is displayed in the folder at: " + outPath);
     }
-
 
 
      public static BufferedImage convertjpg (Integer dWidth, Integer dHeight, BufferedImage  colourImage) {
@@ -36,7 +33,6 @@ public class TZPhoto {
                 BufferedImage.TYPE_BYTE_BINARY);
         Graphics2D graphics = blackAndWhiteImage.createGraphics();
          graphics.drawImage(colourImage, 0, 0, null);
-
 
         return blackAndWhiteImage;
     }
